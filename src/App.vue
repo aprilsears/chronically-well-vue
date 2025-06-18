@@ -1,29 +1,29 @@
-<script setup>
-
-</script>
-
 <template>
   <div id="app">
-    <header>
-      <!-- Your header content will go here -->
-    </header>
-
-    <main>
-      <!-- Your main content will go here -->
+    <AppHeader />
+    <main id="main-content" role="main">
+      <router-view />
     </main>
+    <AppFooter />
   </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script>
+import AppHeader from './components/common/app.header.vue'
+import AppFooter from './components/common/app.footer.vue'
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+export default {
+  name: 'App',
+  components: {
+    AppHeader,
+    AppFooter
   }
 }
+</script>
+
+<style> 
+
+  @import url("./assets/css/reset.css");
+  @import url("./assets/css/style.css");
+  
 </style>
