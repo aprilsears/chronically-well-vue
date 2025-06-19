@@ -1,13 +1,11 @@
 <template>
   <div class="home">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <!-- Hero content here -->
-      </div>
-    </section>
+    <Hero />
   </div>
 </template>
 
 <script setup>
-// Add hero logic if needed
+import Hero from '@/components/common/home/hero.vue'
 </script>
+<style scoped>
+</style>
