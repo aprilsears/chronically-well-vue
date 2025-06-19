@@ -1,14 +1,13 @@
-const express = require('express');
-const axios = require('axios');
-require('dotenv').config();
+import express from 'express'
+import axios from 'axios'
 
-const router = express.Router();
+const router = express.Router()
 
 router.post('/api/nutrition', async (req, res) => {
   try {
-    const { query } = req.body;
+    const { query } = req.body
     if (!query) {
-      return res.status(400).json({ error: 'Query is required' });
+      return res.status(400).json({ error: 'Query is required' })
     }
 
     const response = await axios.post(
@@ -21,12 +20,22 @@ router.post('/api/nutrition', async (req, res) => {
           'Content-Type': 'application/json'
         }
       }
-    );
+    )
 
-    res.json(response.data);
+    // fields requested:
+    const foods = response.data.foods.map(food => ({
+      name: food.food_name,
+      calories: food.nf_calories,
+      protein: food.nf_protein,
+      fat: food.nf_total_fat,
+      carbs: food.nf_total_carbohydrate
+    }))
+
+    res.json({ foods })
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch nutrition data.' });
+    console.error('Error fetching nutrition data:', error)
+    res.status(500).json({ error: 'Failed to fetch nutrition data.' })
   }
-});
+})
 
-module.exports = router;
+export default router
