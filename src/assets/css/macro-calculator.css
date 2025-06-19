@@ -10,13 +10,13 @@
 }
 
 .calculator-container {
-  max-width: 600px;
+    height: 100vh;
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
   margin: 2rem auto;
   padding: 1rem;
-  border: 0.3rem solid var(--cliff);
+  border: 0.3rem solid var(--plum);
   border-radius: 1.5rem;
   background-color: var(--sage);
   color: var(--bark);
@@ -62,7 +62,7 @@
 .form-group input,
 .form-group select {
   padding: 1rem;
-  border: 2px solid var(--cliff);
+  border: 2px solid var(--plum);
   border-radius: 0.5rem;
   font-size: 1.5rem;
   background-color: var(--ethereal);
@@ -92,7 +92,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
+  justify-content: center;
   width: 100%;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -105,7 +105,7 @@ button:hover {
 /* Responsive: stack everything on mobile */
 @media (max-width: 900px) {
   .calculator-container {
-    width: 95vw;
+     width: 95vw;
     padding: 1rem;
     margin: 1rem auto;
   }

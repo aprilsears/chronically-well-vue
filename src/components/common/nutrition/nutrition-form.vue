@@ -10,6 +10,6 @@ import { ref } from 'vue'
 const foodQuery = ref('')
 </script>
 
-<style scoped>
-/* ...your styles... */
+<style>
+@import "@/assets/css/nutrition.css";
 </style>

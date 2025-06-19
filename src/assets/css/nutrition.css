@@ -1,18 +1,8 @@
 /* Nutrition Page Specific Styles */
 
-/* Forms */
-#nutrition-form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    width: 90%;
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
 
-#nutrition-form input[type="text"],
+
+
 #food-query {
     flex: 1;
     min-width: 200px;
@@ -26,54 +16,15 @@
     color: var(--bark);
 }
 
-#nutrition-form input[type="text"]:focus,
+
 #food-query:focus {
     border-color: var(--plum);
 }
 
-#nutrition-form button[type="submit"],
-#nutrition-form button {
-    background-color: var(--ethereal);
-    color: var(--plum);
-    padding: 0.75rem 1.5rem;
-    margin: 1rem;
-    border: 4px solid var(--plum);
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-    min-width: 100px;
-}
 
-#nutrition-form button[type="submit"]:hover,
-#nutrition-form button:hover {
-    background-color: var(--cliff);
-}
 
-/* Nutrition Results */
-#nutrition-results {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.nutrition-results {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(47, 41, 38, 0.15);
-    margin: 1rem;
-    background-color: var(--ethereal);
-    color: var(--plum);
-}
+
 
 .content-card {
     background-color: var(--ethereal);
@@ -99,37 +50,3 @@
     color: var(--cliff);
 }
 
-/* Media Queries for Nutrition Form */
-@media screen and (max-width: 480px) {
-    #nutrition-form {
-        flex-direction: column;
-        width: 95%;
-        gap: 1rem;
-    }
-
-    #food-query,
-    #nutrition-form input[type="text"] {
-        width: 100%;
-    }
-
-    #nutrition-form button {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    #nutrition-form {
-        width: 90%;
-    }
-
-    #food-query,
-    #nutrition-form input[type="text"] {
-        min-width: 150px;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    #nutrition-form {
-        width: 80%;
-    }
-}

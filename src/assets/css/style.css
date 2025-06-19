@@ -7,20 +7,20 @@
   --sage: #b1b093;
   --cliff: #5a554c;
   --plum: #48252f;
-  --header-height: 60px;
-  --footer-height: 60px;
-  --min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  
 }
 
 body {
   color: var(--plum);
   font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
   min-height: 100vh;
   width: 100%;
   background-color: var(--sage);
-  margin: 0;
-  padding: 0;
+  margin: 1rem;
+  padding: 1rem;
   overflow-x: hidden;
+
 }
 
 main, .content-section, .container {
@@ -50,10 +50,13 @@ footer {
   justify-content: center;
   width: 100%;
   background-color: var(--bark);
-  color: var(--ethereal);
-  padding: 1rem;
+  color: var(--bark);
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
+  border-radius: .5rem;
+  min-width: 0;
+  box-sizing: border-box;
 }
-
 .primary-nav {
   display: flex;
   flex-direction: column;
@@ -71,24 +74,29 @@ footer {
   font-weight: lighter;
   color: var(--ethereal);
 }
+body, #app {
+  width: 100vw;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* Content Sections */
-.content-section {
-  max-width: 1200px;
+.content-section, .container {
+  max-width: 1600px; 
+  width: 100%;
   margin: 2rem auto;
   padding: 2rem;
+  box-sizing: border-box;
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(47, 41, 38, 0.15);
   background-color: var(--ethereal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(47, 41, 38, 0.15);
-}
+
 .section-image {
   max-width: 100%;
   height: auto;
@@ -112,6 +120,15 @@ footer {
   box-shadow: 0 2px 4px rgba(47, 41, 38, 0.15);
   padding: 1rem;
 }
+.hero p {
+  text-align: center;
+  font-size: 1.75rem;    
+  margin: 1rem auto;
+  color: var(--plum);    
+  max-width: 90%;
+  line-height: 1.5;
+  font-weight: 500;
+}
 
 /* Error Message */
 .error-message {
@@ -128,8 +145,10 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1.5rem 3rem;
+    width: 100%;
   }
+}
   .primary-nav {
     flex-direction: row;
     gap: 2rem;
@@ -145,10 +164,9 @@ footer {
     width: 100%;
   }
   .content-section, .container {
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 2rem auto;
     width: 100%;
   }
-}

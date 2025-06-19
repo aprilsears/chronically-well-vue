@@ -11,15 +11,6 @@
             :exercises="getExercisesByCategory(category)"
           />
         </div>
-        <!-- DEBUG OUTPUT -->
-        <div style="background: #eee; color: #222; padding: 1rem; margin-top: 2rem;">
-          <h3>Debug Info</h3>
-          <div>Categories: {{ categories }}</div>
-          <div v-for="category in categories" :key="category">
-            <strong>{{ category }}:</strong>
-            <span>{{ getExercisesByCategory(category) }}</span>
-          </div>
-        </div>
       </div>
     </section>
   </div>
