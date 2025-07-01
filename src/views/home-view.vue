@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import Hero from '@/components/common/home/hero.vue'
+import Hero from '@/components/common/hero.vue'
 </script>
 <style scoped>
 </style>

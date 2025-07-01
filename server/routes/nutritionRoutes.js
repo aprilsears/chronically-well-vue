@@ -3,6 +3,9 @@ import axios from 'axios'
 
 const router = express.Router()
 
+console.log('App ID:', process.env.NUTRITIONIX_APP_ID)
+console.log('API Key:', process.env.NUTRITIONIX_API_KEY)
+
 router.post('/api/nutrition', async (req, res) => {
   try {
     const { query } = req.body

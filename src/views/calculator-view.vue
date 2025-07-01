@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import MacroCalculator from '@/components/common/macro-calculator/macro-calculator.vue'
+import MacroCalculator from '@/components/features/macro-calculator/macro-calculator.vue'
 </script>

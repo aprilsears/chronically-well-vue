@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { workoutDatabase } from '../data/workout-database'
+import { workoutDatabase } from '../../server/models/workout-database'
 
 export const useWorkoutStore = defineStore('workout', {
   state: () => ({

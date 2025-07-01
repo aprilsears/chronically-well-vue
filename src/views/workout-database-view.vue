@@ -3,7 +3,9 @@
 </template>
 
 <script>
-import WorkoutDatabase from '../components/common/workouts/workout-database.vue'
+import WorkoutDatabase from '@/components/features/workouts/workout-database.vue'
+
+
 
 export default {
   name: 'WorkoutDatabaseView',
