@@ -83,8 +83,6 @@ async function onSearch() {
 }
 
 #nutrition-form input[type="text"] {
-  flex: 1;
-  min-width: 200px;
   padding: 0.75rem;
   border: 2px solid var(--bark);
   border-radius: 4px;

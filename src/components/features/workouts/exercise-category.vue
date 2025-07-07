@@ -1,7 +1,7 @@
 <template>
   <div class="exercise-category" v-if="exercises && exercises.length">
     <h2 class="section-header">{{ capitalizedName }} Exercises</h2>
-    <div class="card-row">
+    <div class="card-grid">
       <exercise-card
         v-for="workout in exercises"
         :key="workout.name"
@@ -26,22 +26,47 @@ const capitalizedName = computed(() => {
 </script>
 
 <style scoped>
-.card-row {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.exercise-category {
+  margin: 2rem 0;
+  padding: 1rem;
 }
 
-@media (min-width: 900px) {
-  .card-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: flex-start;
+.section-header {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--ethereal);
+  color: var(--plum);
+  font-weight: bold;
+  border: 0.5rem solid var(--plum);
+  border-radius: 1rem;
+  margin: 1rem 0 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Responsive grid layout */
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .card-row > * {
-    flex: 1 1 350px;
-    max-width: 400px;
+}
+
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
+
+
+.card-grid > * {
+  height: 100%;
 }
 </style>

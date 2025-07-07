@@ -54,6 +54,104 @@ function calculateMacros() {
 }
 </script>
 
-<style scoped>
-@import "@/assets/css/macro-calculator.css";
+<style>
+@import url("/src/assets/css/style.css");
+
+.calculator-container {
+  height: 100vh;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 0.3rem solid var(--plum);
+  border-radius: .5rem;
+  background-color: var(--sage);
+  color: var(--bark);
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 15px var(--bark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto;
+}
+
+#macroForm {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 0.2rem solid var(--plum);
+  border-radius: 1rem;
+  gap: 2rem;
+  padding: 2rem 0;
+  background-color: var(--flora);
+  color: var(--bark);
+  margin: 1rem auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--sage);
+  color: var(--bark);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group label {
+  font-size: 1.5rem;
+  color: var(--bark);
+  margin: 1rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 1rem;
+  border: 2px solid var(--plum);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  background-color: var(--ethereal);
+}
+
+button {
+  width: 65%;
+  padding: 1rem;
+  margin: 1rem 0;
+  align-self: center;
+  justify-content: center;
+  background-color: var(--plum);
+  color: var(--ethereal);
+  border: 0.2rem solid var(--bark);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: var(--sage);
+  color: var(--bark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--ethereal);
+  color: var(--plum);
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px var(--bark);
+}
+
 </style>

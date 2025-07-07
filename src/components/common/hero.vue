@@ -61,7 +61,7 @@ const nutritionImg = computed(() => new URL('@/assets/images/jannis-brandt-mmsQU
 .hero {
   background: var(--ethereal);
   border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(47, 41, 38, 0.10);
+  box-shadow: 0 2px 8px var(--bark);
   padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,6 @@ const nutritionImg = computed(() => new URL('@/assets/images/jannis-brandt-mmsQU
   align-items: center;
   min-height: 350px;
   width: 100%;
-  max-width: 400px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -91,18 +90,12 @@ const nutritionImg = computed(() => new URL('@/assets/images/jannis-brandt-mmsQU
     gap: 2rem;
     width: 100%;
   }
-  .landing-row > section {
-    flex: 1 1 0;
-    min-width: 0;
-    max-width: 350px;
-    min-height: 400px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+
   .landing-vertical {
+    flex-direction: column;
     align-items: stretch;
+    height: 100%;
+    width: 100%;
   }
 
 }
